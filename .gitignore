@@ -1,0 +1,20 @@
+logs
+target
+/.classpath
+/.project
+/.settings
+/RUNNING_PID
+.idea/workspace.xml
+.sdkmanrc
+.vagrant
+
+.env
+.idea
+
+#https://stackoverflow.com/questions/30737082/what-are-iml-files-in-android-studio
+*.iml
+
+#ignore .java-version by jenv
+.java-version
+
+.DS_Store

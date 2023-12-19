@@ -1,0 +1,20 @@
+spring:
+  profiles:
+    active: dev
+---
+spring:
+  profiles: dev
+  application:
+    name: "stock-finder"
+  datasource:
+    url: jdbc:postgresql://192.168.33.20:5432/postgres
+    username: vagrant
+    password: vagrant
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+logging:
+  level:
+    com.ezstudio.trading: DEBUG
+
