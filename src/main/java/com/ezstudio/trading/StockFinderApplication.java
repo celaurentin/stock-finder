@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import static com.ezstudio.trading.util.Constants.API_RATE_LIMIT_MESSAGE;
+import static com.ezstudio.trading.util.Constants.MAX_CALLS_DAY;
 
 @SpringBootApplication
 public class StockFinderApplication {
@@ -36,7 +37,7 @@ public class StockFinderApplication {
 			pendingStocks = stockHistoryService.getPendingStocks();
 			for (Stock pendingStock : pendingStocks) {
 				// API restriction 500 calls per day
-				if (apiCalls < 500) {
+				if (apiCalls < MAX_CALLS_DAY) {
 					System.out.println("Processing: " + pendingStock.toString());
 					try {
 						stockHistoryService.processStockMetrics(pendingStock);

@@ -16,6 +16,6 @@ public final class Constants {
     public static final Integer TWO_YEARS_SAMPLES = 24;
     public static final Integer FIVE_YEARS_SAMPLES = 60;
     public static final String API_RATE_LIMIT_MESSAGE = "Our standard API call frequency is 5 calls per minute and 500 calls per day";
-
+    public static final Integer MAX_CALLS_DAY = 25;
 
 }

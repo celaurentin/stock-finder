@@ -1,9 +1,9 @@
 spring:
-  profiles:
-    active: dev
+  config:
+    activate:
+      on-profile: "dev"
 ---
 spring:
-  profiles: dev
   application:
     name: "stock-finder"
   datasource:
@@ -17,4 +17,3 @@ spring:
 logging:
   level:
     com.ezstudio.trading: DEBUG
-

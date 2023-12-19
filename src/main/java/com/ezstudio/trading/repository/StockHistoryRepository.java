@@ -18,8 +18,8 @@ import java.util.List;
 public class StockHistoryRepository {
 
   private final Logger logger = LoggerFactory.getLogger("StockHistoryRepository");
-  private static final String GET_PENDING_STOCKS = "select trim(sym) sym, \"name\", sector, industry, processed from " +
-          "stock_finder.stock_history where processed = ? order by sym";
+  private static final String GET_PENDING_STOCKS = "select trim(sym) sym, name, sector, industry, processed from " +
+          "stock_finder.stock_history where processed = false order by sym";
   private static final String UPDATE_STOCK = "update stock_finder.stock_history set " +
           "perc_1yr = ?, std_1yr = ?, " +
           "perc_2yr = ?, std_2yr = ?, " +
